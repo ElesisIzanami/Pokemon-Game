@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(https://coolhdwall.com/storage1/202107/pokemon-unite-pokemon-4k-wallpaper-3840x2160.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Fredoka One', cursive;
+}
+
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.title {
+    margin-top: 20px;
+    width: 30%;
+    margin-bottom: 30px;
+   
+}
+
+.seleccionarPokemon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:  #2575bb8d;
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 20px;
+    
+    margin-top: 80px;
+}
+
+.tarjetasPokemonContainer, .botonAtaqueContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+    
+}
+
+
+.tarjetaPokemon{
+    background-color: orange;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    opacity: 0.5;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.tarjetaPokemon:hover img{  
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out; 
+}
+
+.tarjetaPokemon:hover {  
+    opacity: 1;
+}
+
+.tarjetaPokemon img {
+    width:180px;
+}
+
+.tarjetaPokemon .imgBulvasaur{
+    width: 210px;
+}
+
+.tarjetaPokemon .imgCharmander{
+    width: 210px;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    opacity: 1;
+ }
+
+
+.botonSelect{
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.456);
+    border: 2px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translateY(0px) scale(1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 15px;
+    
+}
+
+.botonSelect:hover {
+    transform: translateY(5px) scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px -5px 5px 0px black
+}
+
+.seleccionarAtaque {
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+.subTitle{
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.botonAtaque{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    opacity: 0.5;
+}
+
+.botonAtaque:hover {
+    opacity: 1;
+}
+
+.seleccionarAtaque div .botonAtaque:nth-child(1){
+    background-color: rgba(255, 0, 0, 0.600);
+}
+
+.seleccionarAtaque div .botonAtaque:nth-child(2){
+    background-color: rgba(0, 0, 255, 0.600)
+}
+
+.seleccionarAtaque div .botonAtaque:nth-child(3){
+    background-color: rgba(172, 255, 47, 0.600)
+}
+
+#mensajes {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.456);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+#boton-reload {
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100px;
+    color: blue;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.resultadosContainer{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    gap: 20px;
+    margin-top: 5px;
+}
+
+.resultados{
+    width: 200px;
+    
+    background-color: rgba(0, 0, 0, 0.451);
+    border-radius: 10px; 
+    color: white;
+}
+
+
+.nombrePokemon{
+    font-weight: bold;
+}
+
+#imagen-Pokemon {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 0, 0, 0.599);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    border-radius: 10px;
+    animation: 1s poke1 ease-in-out ;
+}
+
+@keyframes poke1 {
+    0% {
+        transform: translateX(-500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#imagen-Pokemon2{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 255, 0.599);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    animation: 1s poke2 ease-in-out ;
+}
+
+@keyframes poke2 {
+    0% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+.imgene{
+    width: 300px;   
+}
+
+
+#mapaContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapa {
+ border: 2px solid white;   
+}
+
+@media (max-width: 360px) {
+
+    
+    .seleccionarPokemon{
+        margin-top: 0px;
+    }
+
+    .tarjetasPokemonContainer{
+        flex-direction: column;
+    }
+
+    .title {
+        width: 80%;   
+    }
+
+    .subTitle{
+        font-size: 18px;
+    }
+
+    .botonAtaqueContainer{
+        flex-direction: column;
+    }
+}
+
